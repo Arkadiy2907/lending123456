@@ -1,0 +1,43 @@
+@import './global/nullstyle';
+@import './global/variables';
+@import './global/fonts';
+
+html {
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0A1571, #01020B);
+  color: $color-white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  padding: 0 1.2rem;
+
+  @media (max-width: 1024px) {
+    padding: 0 2.3rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 1.8rem;
+  }
+}
+
+@import './header';
+@import './hero';
+@import './mobile_menu';
+@import './about';
+@import './privacy_policy';
+@import './footer';

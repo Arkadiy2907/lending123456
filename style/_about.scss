@@ -1,0 +1,204 @@
+.about {
+  padding: 1.81rem;
+  margin: 2.25rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 79.5625rem;
+
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  .about-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1.25rem;
+    font-weight: 400;
+    font-size: 2rem;
+
+    &:first-of-type .about-card {
+      background: $bg-card-gradient;
+    }
+
+    &:nth-of-type(2) .about-card {
+      background: $bg-card-dark-gradient;
+    }
+  }
+
+  .about-card {
+    border-radius: 1.625rem;
+    padding: 1.8125rem 1.25rem 1.8125rem 3.125rem;
+    width: 45%;
+    min-height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    img {
+      width: 3.125rem;
+      height: 3.125rem;
+      object-fit: cover;
+      margin-left: -0.3125rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .cubes-image {
+    max-width: 45%;
+    padding: 2px;
+    margin-top: 3rem;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    h2 {
+      font-size: 4rem;
+    }
+
+    .about-cards {
+      font-size: 1.8rem;
+    }
+
+    .about-card {
+      padding: 1.8rem 1.2rem 1.8rem 3.1rem;
+      width: 45%;
+      min-height: auto;
+    }
+
+    .cubes-image img {
+      max-width: 28rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    h2 {
+      font-size: 3rem;
+    }
+
+    .about-cards {
+      font-size: 1.3rem;
+    }
+
+    .about-card {
+      padding: 1.4rem 1rem 1.4rem 2.8rem;
+    }
+
+    .cubes-image img {
+      max-width: 26rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .about-cards {
+      font-size: 1.1rem;
+    }
+
+    .about-card {
+      padding: 1rem .8rem 1rem 2.4rem;
+
+      img {
+        width: 2.9rem;
+        height: auto;
+        margin-left: -0.3125rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .cubes-image img {
+      max-width: 23rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.1rem;
+
+    h2 {  
+      font-size: 2.2rem;
+    }
+
+    .about-cards {
+      font-size: .8rem;
+    }
+
+    .about-card {
+      padding: 1rem .8rem 1rem 2.4rem;
+
+      img {
+        width: 2.2rem;
+        margin-bottom: .7rem;
+      }
+    }
+
+    .cubes-image {
+      margin-top: 1rem;
+
+      img {
+        max-width: 18rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .about-cards {
+      font-size: .9rem;
+    }
+
+    .about-card {
+      padding: .7rem .3rem .8rem 1.4rem;
+
+      img {
+        width: 2rem;
+        margin-bottom: .5rem;
+      }
+    }
+
+    .cubes-image {
+      margin-top: .6rem;
+
+      img {
+        max-width: 14rem;
+      }
+    }
+  }
+
+  @media (max-width: 324px) {
+    .about-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-card {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .about-cards:nth-of-type(2) {
+      flex-direction: column;
+    }
+
+    .cubes-image {
+      order: 2;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+
+    .about-cards:nth-of-type(2) .about-card {
+      order: 1;
+    }
+  }
+}
