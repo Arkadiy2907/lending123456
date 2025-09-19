@@ -6,8 +6,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 100%;
-  max-width: 77rem;
+  width: 100%; 
+  max-width: 72rem;
 
   .hero-content {
     max-width: 59%;
@@ -21,14 +21,6 @@
       font-size: 3.125rem;
       margin-bottom: 1.25rem;
       max-width: 68%;
-
-      span {
-        background: linear-gradient(to right, #334BFF, #1F2D99);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        font-size: 3.625rem;
-      }
     }
 
     p {
@@ -121,6 +113,7 @@
 
   @media (max-width: 900px) {
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
     .hero-content {
       h1 {
@@ -151,6 +144,7 @@
   }
   @media (max-width: 800px) {
      padding-left: 1.25rem;
+     padding-right: 1.25rem;
 
     .hero-content {
       h1 {

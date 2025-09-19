@@ -4,6 +4,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -12,6 +13,11 @@ html {
   @media (max-width: 480px) {
     font-size: 12px;
   }
+}
+
+section[id],
+#privacy-policy-section {
+  scroll-margin-top: 6rem;
 }
 
 .body {
