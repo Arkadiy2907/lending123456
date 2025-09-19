@@ -27,6 +27,7 @@
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 768px) {
   html {
@@ -37,6 +38,11 @@ html {
   html {
     font-size: 12px;
   }
+}
+
+section[id],
+#privacy-policy-section {
+  scroll-margin-top: 6rem;
 }
 
 .body {
@@ -63,18 +69,29 @@ html {
 }
 
 .header {
-  padding: 1.25rem 1.25rem 0 1.25rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4rem;
   width: 100%;
-  max-width: 79.5625rem;
+  max-width: 72rem;
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 1.25rem 0;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 21, 113, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 .header .logo {
+  text-decoration: none;
+  cursor: pointer;
+}
+.header .logo div {
   display: flex;
   align-items: center;
 }
@@ -114,32 +131,12 @@ html {
 .header .nav ul li a:hover {
   color: #44AEFE;
 }
-.header .nav ul li.privacy-link {
-  position: relative;
-  width: 60%;
-  text-align: center;
-}
-.header .nav ul li.privacy-link a {
-  pointer-events: none;
-}
-.header .nav ul li.privacy-link label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 2;
-}
-.header .nav ul li.privacy-link label:hover ~ a {
-  color: #44AEFE;
-}
 @media (max-width: 1024px) {
   .header .nav {
     width: 37%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 832px) {
   .header .nav {
     display: none;
   }
@@ -171,7 +168,7 @@ html {
     font-size: 1.25rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 832px) {
   .header .contact-us-button {
     display: none;
   }
@@ -184,6 +181,14 @@ html {
 @media (max-width: 900px) {
   .header {
     font-size: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
@@ -196,7 +201,7 @@ html {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  max-width: 77rem;
+  max-width: 72rem;
 }
 .hero .hero-content {
   max-width: 59%;
@@ -210,13 +215,6 @@ html {
   font-size: 3.125rem;
   margin-bottom: 1.25rem;
   max-width: 68%;
-}
-.hero .hero-content h1 span {
-  background: linear-gradient(to right, #334BFF, #1F2D99);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 3.625rem;
 }
 .hero .hero-content p {
   margin-bottom: 2.25rem;
@@ -288,6 +286,7 @@ html {
 @media (max-width: 900px) {
   .hero {
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   .hero .hero-content h1 {
     font-size: 1.9rem;
@@ -312,6 +311,7 @@ html {
 @media (max-width: 800px) {
   .hero {
     padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .hero .hero-content h1 {
     font-size: 1.8rem;
@@ -399,7 +399,7 @@ html {
 .menu-icon .icon-active {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 832px) {
   .menu-icon {
     display: flex;
   }
@@ -434,13 +434,13 @@ html {
   min-width: 7.5rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 833px) {
   .menu-content {
     display: none !important;
   }
 }
 .about {
-  padding: 1.81rem;
+  padding: 1.81rem 3.75rem;
   margin: 2.25rem 0;
   display: flex;
   flex-direction: column;
@@ -450,7 +450,7 @@ html {
 .about h2 {
   font-size: 5rem;
   margin-bottom: 2.5rem;
-  text-align: left;
+  text-align: center;
 }
 .about .about-cards {
   display: flex;
@@ -523,6 +523,10 @@ html {
   }
 }
 @media (max-width: 900px) {
+  .about {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   .about h2 {
     font-size: 2.5rem;
   }
@@ -544,7 +548,7 @@ html {
 }
 @media (max-width: 768px) {
   .about {
-    padding: 0.1rem;
+    padding: 0.1rem 1.25rem;
   }
   .about h2 {
     font-size: 2.2rem;
@@ -611,10 +615,9 @@ html {
 
 .privacy-policy {
   border-radius: 1.4375rem;
-  padding: 0;
   margin: 4.25rem auto 2.25rem;
   width: 100%;
-  max-width: 77rem;
+  max-width: 72rem;
   background: linear-gradient(135deg, #252b3e, #000000, #272d3f);
   overflow: hidden;
 }
@@ -624,7 +627,7 @@ html {
 .privacy-policy label {
   display: flex;
   align-items: center;
-  padding: 0.625rem;
+  padding: 0.625rem 3.75rem;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 2rem;
@@ -680,6 +683,16 @@ html {
 .privacy-policy .privacy-policy-content p:nth-of-type(2) {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+@media (max-width: 900px) {
+  .privacy-policy label {
+    padding: 0.625rem 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .privacy-policy label {
+    padding: 0.625rem 1.25rem;
+  }
 }
 @media (max-width: 480px) {
   .privacy-policy label {
